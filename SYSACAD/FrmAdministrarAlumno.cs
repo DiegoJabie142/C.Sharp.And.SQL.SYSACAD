@@ -148,12 +148,65 @@ namespace SYSACAD
 
         private void lstBxMateriasActuales_SelectedIndexChanged(object sender, EventArgs e)
         {
+            lblMateria.Visible = true;
+            lblMateria.Text = "Materia: " + lstBxMateriasActuales.Text;
 
+            try
+            {
+                int nota1 = MateriaDao.NotaDeUnAlumno(dniAlumno, lstBxMateriasActuales.Text, "Primer parcial");
+                int nota2 = MateriaDao.NotaDeUnAlumno(dniAlumno, lstBxMateriasActuales.Text, "Segundo parcial");
+                EstadoMateria estadoMateria = MateriaDao.ObtenerEstadoMateriaDeUnAlumno(dniAlumno, lstBxMateriasActuales.Text);
+
+                lblNotaPrimerParcial.Visible = true;
+                lblNotaSegundoParcial.Visible = true;
+
+                if(estadoMateria == EstadoMateria.Regular)
+                {
+                    lblEstadoMateria.Text = "Estado materia: Regular";
+                }
+                else
+                {
+                    lblEstadoMateria.Text = "Estado materia: Libre";
+                }
+
+                if (nota1 != -1)
+                {
+                    lblNotaPrimerParcial.Text = "Nota primer parcial: " + nota1.ToString();
+                }
+                else
+                {
+                    lblNotaPrimerParcial.Text = "Nota primer parcial: SIN ASIGNAR";
+                }
+
+                if (nota2 != -1)
+                {
+                    lblNotaSegundoParcial.Text = "Nota segundo parcial: " + nota2.ToString();
+                }
+                else
+                {
+                    lblNotaSegundoParcial.Text = "Nota primer parcial: SIN ASIGNAR";
+                }
+            }
+            catch (Exception)
+            {
+
+            }
         }
 
         private void lstBxMateriasAprobadas_SelectedIndexChanged(object sender, EventArgs e)
         {
+            lblMateria.Visible = true;
+            lblMateria.Text = "Materia: " + lstBxMateriasAprobadas.Text;
 
+
+            try
+            {
+
+            }
+            catch (Exception)
+            {
+
+            }
         }
     }
 }

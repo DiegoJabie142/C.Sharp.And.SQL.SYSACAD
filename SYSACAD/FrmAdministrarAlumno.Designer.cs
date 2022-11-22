@@ -43,7 +43,7 @@
             this.btnCerrarSesion = new System.Windows.Forms.Button();
             this.lblAlumnoSeleccionado = new System.Windows.Forms.Label();
             this.lblEstadoMateria = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblNotaSegundoParcial = new System.Windows.Forms.Label();
             this.lblNotaPrimerParcial = new System.Windows.Forms.Label();
             this.lblMateria = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -141,7 +141,7 @@
             this.lblMateriaSeleccionada.AutoSize = true;
             this.lblMateriaSeleccionada.BackColor = System.Drawing.Color.Transparent;
             this.lblMateriaSeleccionada.Font = new System.Drawing.Font("Bahnschrift Condensed", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblMateriaSeleccionada.Location = new System.Drawing.Point(503, 447);
+            this.lblMateriaSeleccionada.Location = new System.Drawing.Point(526, 447);
             this.lblMateriaSeleccionada.Name = "lblMateriaSeleccionada";
             this.lblMateriaSeleccionada.Size = new System.Drawing.Size(201, 25);
             this.lblMateriaSeleccionada.TabIndex = 21;
@@ -153,7 +153,7 @@
             this.lblMateriaAAsignar.AutoSize = true;
             this.lblMateriaAAsignar.BackColor = System.Drawing.Color.Transparent;
             this.lblMateriaAAsignar.Font = new System.Drawing.Font("Bahnschrift Condensed", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblMateriaAAsignar.Location = new System.Drawing.Point(354, 447);
+            this.lblMateriaAAsignar.Location = new System.Drawing.Point(377, 447);
             this.lblMateriaAAsignar.Name = "lblMateriaAAsignar";
             this.lblMateriaAAsignar.Size = new System.Drawing.Size(143, 25);
             this.lblMateriaAAsignar.TabIndex = 20;
@@ -208,17 +208,17 @@
             this.lblEstadoMateria.Text = "Estado materia:";
             this.lblEstadoMateria.Visible = false;
             // 
-            // label3
+            // lblNotaSegundoParcial
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Bahnschrift Condensed", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(216, 319);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(164, 25);
-            this.label3.TabIndex = 30;
-            this.label3.Text = "Nota segundo parcial:";
-            this.label3.Visible = false;
+            this.lblNotaSegundoParcial.AutoSize = true;
+            this.lblNotaSegundoParcial.BackColor = System.Drawing.Color.Transparent;
+            this.lblNotaSegundoParcial.Font = new System.Drawing.Font("Bahnschrift Condensed", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblNotaSegundoParcial.Location = new System.Drawing.Point(216, 319);
+            this.lblNotaSegundoParcial.Name = "lblNotaSegundoParcial";
+            this.lblNotaSegundoParcial.Size = new System.Drawing.Size(164, 25);
+            this.lblNotaSegundoParcial.TabIndex = 30;
+            this.lblNotaSegundoParcial.Text = "Nota segundo parcial:";
+            this.lblNotaSegundoParcial.Visible = false;
             // 
             // lblNotaPrimerParcial
             // 
@@ -252,7 +252,7 @@
             this.ClientSize = new System.Drawing.Size(883, 500);
             this.Controls.Add(this.lblMateria);
             this.Controls.Add(this.lblNotaPrimerParcial);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.lblNotaSegundoParcial);
             this.Controls.Add(this.lblEstadoMateria);
             this.Controls.Add(this.lblAlumnoSeleccionado);
             this.Controls.Add(this.btnCerrarSesion);
@@ -291,7 +291,7 @@
         private System.Windows.Forms.Button btnCerrarSesion;
         private System.Windows.Forms.Label lblAlumnoSeleccionado;
         private System.Windows.Forms.Label lblEstadoMateria;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblNotaSegundoParcial;
         private System.Windows.Forms.Label lblNotaPrimerParcial;
         private System.Windows.Forms.Label lblMateria;
     }
