@@ -46,6 +46,7 @@
             this.lblFechaExamen = new System.Windows.Forms.Label();
             this.dateTimePickerExamen = new System.Windows.Forms.DateTimePicker();
             this.btnCerrarSesion = new System.Windows.Forms.Button();
+            this.lblAlumnoSeleccionado = new System.Windows.Forms.Label();
             this.grpBxPonerNota.SuspendLayout();
             this.grpBxCrearExamen.SuspendLayout();
             this.SuspendLayout();
@@ -260,12 +261,25 @@
             this.btnCerrarSesion.UseVisualStyleBackColor = false;
             this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click);
             // 
+            // lblAlumnoSeleccionado
+            // 
+            this.lblAlumnoSeleccionado.AutoSize = true;
+            this.lblAlumnoSeleccionado.BackColor = System.Drawing.Color.Transparent;
+            this.lblAlumnoSeleccionado.Font = new System.Drawing.Font("Bahnschrift Condensed", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblAlumnoSeleccionado.Location = new System.Drawing.Point(363, 238);
+            this.lblAlumnoSeleccionado.Name = "lblAlumnoSeleccionado";
+            this.lblAlumnoSeleccionado.Size = new System.Drawing.Size(164, 25);
+            this.lblAlumnoSeleccionado.TabIndex = 27;
+            this.lblAlumnoSeleccionado.Text = "Alumno seleccionado:";
+            this.lblAlumnoSeleccionado.Visible = false;
+            // 
             // FrmProfesor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(891, 500);
+            this.Controls.Add(this.lblAlumnoSeleccionado);
             this.Controls.Add(this.btnCerrarSesion);
             this.Controls.Add(this.grpBxCrearExamen);
             this.Controls.Add(this.grpBxPonerNota);
@@ -281,6 +295,7 @@
             this.grpBxCrearExamen.ResumeLayout(false);
             this.grpBxCrearExamen.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -303,5 +318,6 @@
         private System.Windows.Forms.Label lblFechaExamen;
         private System.Windows.Forms.DateTimePicker dateTimePickerExamen;
         private System.Windows.Forms.Button btnCerrarSesion;
+        private System.Windows.Forms.Label lblAlumnoSeleccionado;
     }
 }
