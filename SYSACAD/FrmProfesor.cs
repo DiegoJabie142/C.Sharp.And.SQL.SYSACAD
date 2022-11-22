@@ -44,6 +44,7 @@ namespace SYSACAD
         {
             txBxNota.Visible = false;
             lblNota.Visible = false;
+            lblAlumnoSeleccionado.Visible = false;
 
             if (lstBxMaterias.SelectedItems.Count == 1)
             {
@@ -96,6 +97,16 @@ namespace SYSACAD
             foreach(var materia in MateriaDao.ListarInstanciasDeUnProfesor(dni, lstBxMaterias.Text))
             {
                 lstBxExamenes.Items.Add(materia);
+            }
+
+            try
+            {
+                lblAlumnoSeleccionado.Text = "Alumno seleccionado: " + UsuarioDao.ListarNombrePorDni(int.Parse(lstBxAlumnos.Text));
+                lblAlumnoSeleccionado.Visible = true;
+            }
+            catch (Exception)
+            {
+
             }
         }
 

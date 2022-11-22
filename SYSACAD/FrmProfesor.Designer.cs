@@ -266,7 +266,7 @@
             this.lblAlumnoSeleccionado.AutoSize = true;
             this.lblAlumnoSeleccionado.BackColor = System.Drawing.Color.Transparent;
             this.lblAlumnoSeleccionado.Font = new System.Drawing.Font("Bahnschrift Condensed", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblAlumnoSeleccionado.Location = new System.Drawing.Point(363, 238);
+            this.lblAlumnoSeleccionado.Location = new System.Drawing.Point(226, 319);
             this.lblAlumnoSeleccionado.Name = "lblAlumnoSeleccionado";
             this.lblAlumnoSeleccionado.Size = new System.Drawing.Size(164, 25);
             this.lblAlumnoSeleccionado.TabIndex = 27;

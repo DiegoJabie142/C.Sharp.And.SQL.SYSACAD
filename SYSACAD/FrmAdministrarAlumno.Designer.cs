@@ -63,6 +63,7 @@
             this.lstBxMateriasAprobadas.Name = "lstBxMateriasAprobadas";
             this.lstBxMateriasAprobadas.Size = new System.Drawing.Size(204, 184);
             this.lstBxMateriasAprobadas.TabIndex = 17;
+            this.lstBxMateriasAprobadas.SelectedIndexChanged += new System.EventHandler(this.lstBxMateriasAprobadas_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -106,6 +107,7 @@
             this.lstBxMateriasActuales.Name = "lstBxMateriasActuales";
             this.lstBxMateriasActuales.Size = new System.Drawing.Size(204, 94);
             this.lstBxMateriasActuales.TabIndex = 13;
+            this.lstBxMateriasActuales.SelectedIndexChanged += new System.EventHandler(this.lstBxMateriasActuales_SelectedIndexChanged);
             // 
             // lblAlumnos
             // 

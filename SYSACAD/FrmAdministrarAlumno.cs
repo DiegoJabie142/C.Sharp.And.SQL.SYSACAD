@@ -15,6 +15,7 @@ namespace SYSACAD
 {
     public partial class frmAdministrarAlumno : Form
     {
+        private delegate bool Serializador(List<Alumno> lista, string materia);
         private bool soyAdministrador;
         int dniAlumno;
         public frmAdministrarAlumno(int dni, bool administrador)
@@ -123,6 +124,16 @@ namespace SYSACAD
         private void btnCerrarSesion_Click(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.OK;
+        }
+
+        private void lstBxMateriasActuales_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lstBxMateriasAprobadas_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
