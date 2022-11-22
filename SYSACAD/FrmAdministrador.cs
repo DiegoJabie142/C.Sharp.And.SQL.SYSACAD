@@ -15,6 +15,9 @@ namespace SYSACAD
 {
     public partial class FrmAdministrador : Form
     {
+        delegate bool SerializarAlumnos(List<Alumno> alumnos, string materia);
+        SerializarAlumnos serializarJson = JSON.SerializarJSON;
+        SerializarAlumnos serializarXML = XML.SerializarXml;
 
         private EstadoMateria estadoMateria;
         public FrmAdministrador(Administrador administrador)
@@ -212,12 +215,15 @@ namespace SYSACAD
 
         private void btnSerializarMateria_Click(object sender, EventArgs e)
         {
-            //JSON
+            
+
             try
             {
                 List<Alumno> alumnos = UsuarioDao.ListarAlumnosPorMateria(lstBxMaterias.Text);
 
-                if (JSON.SerializarJSON(alumnos,lstBxMaterias.Text))
+                
+
+                if (serializarJson(alumnos, lstBxMaterias.Text))
                 {
                     MessageBox.Show("Se ha serializado correctamente.","Información",MessageBoxButtons.OK,MessageBoxIcon.Information);
                 }
@@ -234,7 +240,8 @@ namespace SYSACAD
             try
             {
                 List<Alumno> alumnos = UsuarioDao.ListarAlumnosPorMateria(lstBxMaterias.Text);
-                if (XML.SerializarXml(alumnos, lstBxMaterias.Text))
+                //if (XML.SerializarXml(alumnos, lstBxMaterias.Text))
+                if(serializarXML(alumnos, lstBxMaterias.Text))
                 {
                     MessageBox.Show("Se ha serializado correctamente.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
