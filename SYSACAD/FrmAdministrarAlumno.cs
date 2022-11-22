@@ -48,6 +48,16 @@ namespace SYSACAD
                 {
                     lstBxMateriasAprobadas.Items.Add(materia);
                 }
+
+                try
+                {
+                    lblAlumnoSeleccionado.Text = "Alumno: " + UsuarioDao.ListarNombrePorDni(dniAlumno);
+                    lblAlumnoSeleccionado.Visible = true;
+                }
+                catch (Exception)
+                {
+
+                }
             }
 
             foreach(var materia in MateriaDao.ListarNombreMaterias())
@@ -72,6 +82,16 @@ namespace SYSACAD
                 foreach (var materia in MateriaDao.ListarMateriasAprobadasDeUnAlumno(dniAlumno))
                 {
                     lstBxMateriasAprobadas.Items.Add(materia);
+                }
+
+                try
+                {
+                    lblAlumnoSeleccionado.Text = "Alumno seleccionado: " + UsuarioDao.ListarNombrePorDni(dniAlumno);
+                    lblAlumnoSeleccionado.Visible = true;
+                }
+                catch (Exception)
+                {
+
                 }
             }
         }

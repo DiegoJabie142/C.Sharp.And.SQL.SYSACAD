@@ -41,6 +41,11 @@
             this.lblMateriaAAsignar = new System.Windows.Forms.Label();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnCerrarSesion = new System.Windows.Forms.Button();
+            this.lblAlumnoSeleccionado = new System.Windows.Forms.Label();
+            this.lblEstadoMateria = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.lblNotaPrimerParcial = new System.Windows.Forms.Label();
+            this.lblMateria = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblMateriasAprobadas
@@ -179,12 +184,77 @@
             this.btnCerrarSesion.UseVisualStyleBackColor = false;
             this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click);
             // 
+            // lblAlumnoSeleccionado
+            // 
+            this.lblAlumnoSeleccionado.AutoSize = true;
+            this.lblAlumnoSeleccionado.BackColor = System.Drawing.Color.Transparent;
+            this.lblAlumnoSeleccionado.Font = new System.Drawing.Font("Bahnschrift Condensed", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblAlumnoSeleccionado.Location = new System.Drawing.Point(216, 405);
+            this.lblAlumnoSeleccionado.Name = "lblAlumnoSeleccionado";
+            this.lblAlumnoSeleccionado.Size = new System.Drawing.Size(69, 25);
+            this.lblAlumnoSeleccionado.TabIndex = 28;
+            this.lblAlumnoSeleccionado.Text = "Alumno:";
+            this.lblAlumnoSeleccionado.Visible = false;
+            // 
+            // lblEstadoMateria
+            // 
+            this.lblEstadoMateria.AutoSize = true;
+            this.lblEstadoMateria.BackColor = System.Drawing.Color.Transparent;
+            this.lblEstadoMateria.Font = new System.Drawing.Font("Bahnschrift Condensed", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblEstadoMateria.Location = new System.Drawing.Point(216, 364);
+            this.lblEstadoMateria.Name = "lblEstadoMateria";
+            this.lblEstadoMateria.Size = new System.Drawing.Size(123, 25);
+            this.lblEstadoMateria.TabIndex = 29;
+            this.lblEstadoMateria.Text = "Estado materia:";
+            this.lblEstadoMateria.Visible = false;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Bahnschrift Condensed", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label3.Location = new System.Drawing.Point(216, 319);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(164, 25);
+            this.label3.TabIndex = 30;
+            this.label3.Text = "Nota segundo parcial:";
+            this.label3.Visible = false;
+            // 
+            // lblNotaPrimerParcial
+            // 
+            this.lblNotaPrimerParcial.AutoSize = true;
+            this.lblNotaPrimerParcial.BackColor = System.Drawing.Color.Transparent;
+            this.lblNotaPrimerParcial.Font = new System.Drawing.Font("Bahnschrift Condensed", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblNotaPrimerParcial.Location = new System.Drawing.Point(216, 285);
+            this.lblNotaPrimerParcial.Name = "lblNotaPrimerParcial";
+            this.lblNotaPrimerParcial.Size = new System.Drawing.Size(153, 25);
+            this.lblNotaPrimerParcial.TabIndex = 31;
+            this.lblNotaPrimerParcial.Text = "Nota primer parcial:";
+            this.lblNotaPrimerParcial.Visible = false;
+            // 
+            // lblMateria
+            // 
+            this.lblMateria.AutoSize = true;
+            this.lblMateria.BackColor = System.Drawing.Color.Transparent;
+            this.lblMateria.Font = new System.Drawing.Font("Bahnschrift Condensed", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblMateria.Location = new System.Drawing.Point(216, 249);
+            this.lblMateria.Name = "lblMateria";
+            this.lblMateria.Size = new System.Drawing.Size(71, 25);
+            this.lblMateria.TabIndex = 32;
+            this.lblMateria.Text = "Materia:";
+            this.lblMateria.Visible = false;
+            // 
             // frmAdministrarAlumno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(883, 500);
+            this.Controls.Add(this.lblMateria);
+            this.Controls.Add(this.lblNotaPrimerParcial);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.lblEstadoMateria);
+            this.Controls.Add(this.lblAlumnoSeleccionado);
             this.Controls.Add(this.btnCerrarSesion);
             this.Controls.Add(this.lblMateriaSeleccionada);
             this.Controls.Add(this.lblMateriaAAsignar);
@@ -219,5 +289,10 @@
         private System.Windows.Forms.Label lblMateriaAAsignar;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Button btnCerrarSesion;
+        private System.Windows.Forms.Label lblAlumnoSeleccionado;
+        private System.Windows.Forms.Label lblEstadoMateria;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblNotaPrimerParcial;
+        private System.Windows.Forms.Label lblMateria;
     }
 }
