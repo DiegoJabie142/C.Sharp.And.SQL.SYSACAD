@@ -242,6 +242,7 @@ namespace EntidadesDao
 
         #endregion
 
+        #region CREAR ALUMNO POR DNI
         public static Alumno CrearAlumnoPorDni(int dni)
         {
             Alumno alumno = null;
@@ -270,5 +271,7 @@ namespace EntidadesDao
 
             return alumno;
         }
+
+        #endregion
     }
 }

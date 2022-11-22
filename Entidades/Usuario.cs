@@ -10,7 +10,12 @@ namespace Entidades
         protected string contraseña;
         protected TipoUsuario idTipo;
 
-        #region CONSTRUCTOR     
+        #region CONSTRUCTORES
+        public Usuario()
+        {
+
+        }
+
         public Usuario(int dni, string nombre, string apellido, string contraseña, TipoUsuario idTipo)
         {
             this.dni = dni;
@@ -19,6 +24,8 @@ namespace Entidades
             this.contraseña = contraseña;
             this.idTipo = idTipo;
         }
+
+        #endregion
 
         public abstract int DNI
         {
@@ -42,8 +49,5 @@ namespace Entidades
         {
             get;
         }
-
-
-        #endregion
     }
 }

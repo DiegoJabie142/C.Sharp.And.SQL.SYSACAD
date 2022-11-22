@@ -7,6 +7,11 @@
         {
 
         }
+        public Administrador()
+        {
+
+        }
+
         #endregion
 
         public override int DNI { get { return this.dni; } }

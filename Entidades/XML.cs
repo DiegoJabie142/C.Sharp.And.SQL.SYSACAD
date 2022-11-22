@@ -14,11 +14,12 @@ namespace Entidades
         private static StreamReader reader;
         public static XmlSerializer serializer;
         private static string path;
+        private static string xmlDefaultPath;
 
         static XML()
         {
             XML.path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
-            XML.path += "\\Materia.xml";
+            xmlDefaultPath = XML.path;
         }
 
         public static bool SerializarXml(List<Alumno> lista, string materia)
@@ -26,7 +27,7 @@ namespace Entidades
             bool retorno = false;
             try
             {
-                XML.path += $"\\{materia}.xml";
+                XML.path = xmlDefaultPath + $"\\{materia}.xml";
 
                 using (XML.writer = new StreamWriter(XML.path))
                 {
@@ -48,7 +49,7 @@ namespace Entidades
             List<Alumno> aux = new List<Alumno>();
             try
             {
-                XML.path += $"\\{materia}.xml";
+                XML.path = xmlDefaultPath + $"\\{materia}.xml";
                 using (XML.reader = new StreamReader(XML.path))
                 {
                     XML.serializer = new XmlSerializer(typeof(List<Alumno>));

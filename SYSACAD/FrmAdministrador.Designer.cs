@@ -50,8 +50,8 @@
             this.lblAlumnos = new System.Windows.Forms.Label();
             this.btnInscribirAlumnoEnMateria = new System.Windows.Forms.Button();
             this.btnCerrarSesion = new System.Windows.Forms.Button();
+            this.btnSerializarMateriaJSON = new System.Windows.Forms.Button();
             this.btnSerializarMateriaXML = new System.Windows.Forms.Button();
-            this.btnSerializarMateriaSeleccionadaJSON = new System.Windows.Forms.Button();
             this.grpBxAsignacionProfesores.SuspendLayout();
             this.grpBxAsignacionEstadoMateria.SuspendLayout();
             this.grpBxEstadoMateria.SuspendLayout();
@@ -327,29 +327,29 @@
             this.btnCerrarSesion.UseVisualStyleBackColor = false;
             this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click);
             // 
+            // btnSerializarMateriaJSON
+            // 
+            this.btnSerializarMateriaJSON.BackColor = System.Drawing.Color.DarkOrange;
+            this.btnSerializarMateriaJSON.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnSerializarMateriaJSON.Location = new System.Drawing.Point(151, 510);
+            this.btnSerializarMateriaJSON.Name = "btnSerializarMateriaJSON";
+            this.btnSerializarMateriaJSON.Size = new System.Drawing.Size(118, 63);
+            this.btnSerializarMateriaJSON.TabIndex = 21;
+            this.btnSerializarMateriaJSON.Text = "Serializar Materia Seleccionada JSON";
+            this.btnSerializarMateriaJSON.UseVisualStyleBackColor = false;
+            this.btnSerializarMateriaJSON.Click += new System.EventHandler(this.btnSerializarMateria_Click);
+            // 
             // btnSerializarMateriaXML
             // 
             this.btnSerializarMateriaXML.BackColor = System.Drawing.Color.DarkOrange;
             this.btnSerializarMateriaXML.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnSerializarMateriaXML.Location = new System.Drawing.Point(151, 510);
+            this.btnSerializarMateriaXML.Location = new System.Drawing.Point(289, 510);
             this.btnSerializarMateriaXML.Name = "btnSerializarMateriaXML";
             this.btnSerializarMateriaXML.Size = new System.Drawing.Size(118, 63);
-            this.btnSerializarMateriaXML.TabIndex = 21;
+            this.btnSerializarMateriaXML.TabIndex = 22;
             this.btnSerializarMateriaXML.Text = "Serializar Materia Seleccionada XML";
             this.btnSerializarMateriaXML.UseVisualStyleBackColor = false;
-            this.btnSerializarMateriaXML.Click += new System.EventHandler(this.btnSerializarMateria_Click);
-            // 
-            // btnSerializarMateriaSeleccionadaJSON
-            // 
-            this.btnSerializarMateriaSeleccionadaJSON.BackColor = System.Drawing.Color.DarkOrange;
-            this.btnSerializarMateriaSeleccionadaJSON.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnSerializarMateriaSeleccionadaJSON.Location = new System.Drawing.Point(289, 510);
-            this.btnSerializarMateriaSeleccionadaJSON.Name = "btnSerializarMateriaSeleccionadaJSON";
-            this.btnSerializarMateriaSeleccionadaJSON.Size = new System.Drawing.Size(118, 63);
-            this.btnSerializarMateriaSeleccionadaJSON.TabIndex = 22;
-            this.btnSerializarMateriaSeleccionadaJSON.Text = "Serializar Materia Seleccionada JSON";
-            this.btnSerializarMateriaSeleccionadaJSON.UseVisualStyleBackColor = false;
-            this.btnSerializarMateriaSeleccionadaJSON.Click += new System.EventHandler(this.btnSerializarMateriaSeleccionadaJSON_Click);
+            this.btnSerializarMateriaXML.Click += new System.EventHandler(this.btnSerializarMateriaSeleccionadaJSON_Click);
             // 
             // FrmAdministrador
             // 
@@ -357,8 +357,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1130, 671);
-            this.Controls.Add(this.btnSerializarMateriaSeleccionadaJSON);
             this.Controls.Add(this.btnSerializarMateriaXML);
+            this.Controls.Add(this.btnSerializarMateriaJSON);
             this.Controls.Add(this.btnCerrarSesion);
             this.Controls.Add(this.btnInscribirAlumnoEnMateria);
             this.Controls.Add(this.grpBxAsignacionEstadoMateria);
@@ -402,7 +402,7 @@
         private System.Windows.Forms.Label lblAlumnos;
         private System.Windows.Forms.Button btnInscribirAlumnoEnMateria;
         private System.Windows.Forms.Button btnCerrarSesion;
+        private System.Windows.Forms.Button btnSerializarMateriaJSON;
         private System.Windows.Forms.Button btnSerializarMateriaXML;
-        private System.Windows.Forms.Button btnSerializarMateriaSeleccionadaJSON;
     }
 }

@@ -4,6 +4,11 @@
     {
 
         #region CONSTRUCTOR
+        public Alumno()
+        {
+
+        }
+
         public Alumno(int dni, string nombre, string apellido, string contraseña) : base(dni, nombre, apellido, contraseña, TipoUsuario.Alumno)
         {
         }

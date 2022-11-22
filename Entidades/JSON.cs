@@ -13,11 +13,11 @@ namespace Entidades
         public static StreamWriter writer;
         public static StreamReader reader;
         public static string path;
-
+        public static string jsonDefaultPath;
         static JSON()
         {
             JSON.path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
-            JSON.path += "\\Materia.json";
+            jsonDefaultPath = JSON.path;
         }
 
         public static bool SerializarJSON(List<Alumno> lista, string materia)
@@ -25,7 +25,8 @@ namespace Entidades
             bool retorno = false;
             try
             {
-                JSON.path = JSON.path += $"\\{materia}.json";
+                JSON.path = jsonDefaultPath += $"\\{materia}.json";
+
                 using (JSON.writer = new StreamWriter(JSON.path))
                 {
 
@@ -48,7 +49,8 @@ namespace Entidades
             List<Alumno> aux = new List<Alumno>();
             try
             {
-                JSON.path = JSON.path += $"\\{materia}.json";
+                JSON.path = jsonDefaultPath += $"\\{materia}.json";
+
                 using (JSON.reader = new StreamReader(JSON.path))
                 {
                     string json = JSON.reader.ReadToEnd();

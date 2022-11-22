@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -30,6 +31,9 @@ namespace SYSACAD
             {
                 lstBxAlumnos.Items.Add(alumno);
             }
+
+            btnSerializarMateriaJSON.Visible = false;
+            btnSerializarMateriaXML.Visible = false;
         }
 
         private void btnAltaUsuario_Click(object sender, EventArgs e)
@@ -52,8 +56,8 @@ namespace SYSACAD
                 lstBxProfesoresDisponibles.Items.Clear();
                 btnEliminarProfesor.Visible = false;
                 btnAgregar.Visible = false;
+                btnSerializarMateriaJSON.Visible = true;
                 btnSerializarMateriaXML.Visible = true;
-                btnSerializarMateriaSeleccionadaJSON.Visible = true;
 
                 foreach (var item in MateriaDao.ListarProfesoresDeUnaMateria(lstBxMaterias.Text))
                 {
@@ -170,9 +174,15 @@ namespace SYSACAD
 
         private void btnSerializarMateria_Click(object sender, EventArgs e)
         {
+            //JSON
             try
             {
                 List<Alumno> alumnos = UsuarioDao.ListarAlumnosPorMateria(lstBxMaterias.Text);
+
+                if (JSON.SerializarJSON(alumnos,lstBxMaterias.Text))
+                {
+                    MessageBox.Show("Se ha serializado correctamente.","Información",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                }
 
             }
             catch (Exception)
@@ -186,7 +196,11 @@ namespace SYSACAD
             try
             {
                 List<Alumno> alumnos = UsuarioDao.ListarAlumnosPorMateria(lstBxMaterias.Text);
+                if (XML.SerializarXml(alumnos, lstBxMaterias.Text))
+                {
+                    MessageBox.Show("Se ha serializado correctamente.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+                }
             }
             catch (Exception)
             {

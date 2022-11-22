@@ -3,10 +3,18 @@
     public class Profesor : Usuario
     {
         #region CONSTRUCTOR
+
+        public Profesor()
+        {
+
+        }
+
         public Profesor(int dni, string nombre, string apellido, string contraseña) : base(dni, nombre, apellido, contraseña, TipoUsuario.Profesor)
         {
 
         }
+
+        #endregion
 
         public override int DNI { get { return this.dni; } }
 
@@ -18,6 +26,6 @@
 
         public override TipoUsuario IdTipo { get { return this.idTipo; } }
         
-        #endregion
+        
     }
 }
