@@ -172,7 +172,7 @@ namespace EntidadesDao
 
         #endregion
 
-        #region CONSULTAS
+        #region LISTAR DNI POR TIPO
 
         public static List<string> ListarDniPorTipo(TipoUsuario tipoUsuario)
         {
@@ -201,6 +201,38 @@ namespace EntidadesDao
             }
 
             return ret;
+        }
+
+        #endregion
+
+        #region LISTAR NOMBRE POR DNI
+        public static string ListarNombrePorDni(int dni)
+        {
+            string rtn = null;
+
+            try
+            {
+                connection.Open();
+                command.Parameters.AddWithValue("@dni", dni);
+                command.CommandText = "SELECT NOMBRE, APELLIDO FROM USUARIO WHERE DNI = @dni";
+                reader = command.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    rtn = reader[0].ToString() + " " + reader[1].ToString();
+                }
+            }
+            catch (Exception)
+            {
+
+            }
+            finally
+            {
+                connection.Close();
+                command.Parameters.Clear();
+            }
+
+            return rtn;
         }
 
         #endregion

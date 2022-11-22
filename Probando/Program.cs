@@ -11,12 +11,9 @@ namespace Probando
         static void Main(string[] args)
         {
 
-            //List<Alumno> alumnos = UsuarioDao.ListarPorMateria("Laboratorio");
+            string diego = UsuarioDao.ListarNombrePorDni(42598324);
 
-            /*foreach(Alumno alumno in alumnos)
-            {
-                Console.WriteLine(alumno.Nombre);
-            }*/
+            Console.WriteLine(diego);
         }
     }
 }

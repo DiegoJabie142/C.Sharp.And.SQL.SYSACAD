@@ -163,6 +163,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmInicioSesion";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SISTEMA UTN FRA - Inicio de sesión";
             this.ResumeLayout(false);
             this.PerformLayout();

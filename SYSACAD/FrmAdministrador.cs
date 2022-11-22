@@ -58,6 +58,8 @@ namespace SYSACAD
                 btnAgregar.Visible = false;
                 btnSerializarMateriaJSON.Visible = true;
                 btnSerializarMateriaXML.Visible = true;
+                lblProfesorActualSeleccionado.Visible = false;
+                lblProfesorDisponibleSeleccionado.Visible = false;
 
                 foreach (var item in MateriaDao.ListarProfesoresDeUnaMateria(lstBxMaterias.Text))
                 {
@@ -77,10 +79,21 @@ namespace SYSACAD
             if (lstBxProfesoresActuales.SelectedItems.Count == 1)
             {
                 btnEliminarProfesor.Visible = true;
+                try
+                {
+                    lblProfesorActualSeleccionado.Text = "Profesor actual seleccionado: " + UsuarioDao.ListarNombrePorDni(int.Parse(lstBxProfesoresActuales.Text));
+                    lblProfesorActualSeleccionado.Visible = true;
+                }
+                catch (Exception)
+                {
+
+                }
+
             }
             else
             {
                 btnEliminarProfesor.Visible = false;
+                lblProfesorActualSeleccionado.Visible = false;
             }
         }
 
@@ -95,9 +108,20 @@ namespace SYSACAD
             if (lstBxProfesoresDisponibles.SelectedItems.Count == 1)
             {
                 btnAgregar.Visible = true;
+                btnEliminarProfesor.Visible = true;
+                try
+                {
+                    lblProfesorDisponibleSeleccionado.Text = "Profesor disponible seleccionado: " + UsuarioDao.ListarNombrePorDni(int.Parse(lstBxProfesoresDisponibles.Text));
+                    lblProfesorDisponibleSeleccionado.Visible = true;
+                }
+                catch (Exception)
+                {
+
+                }
             }
             else
             {
+                lblProfesorDisponibleSeleccionado.Visible = false;
                 btnAgregar.Visible = false;
             }
         }
@@ -113,10 +137,24 @@ namespace SYSACAD
             lstBxMateriasDelAlumno.Items.Clear();
             if(lstBxAlumnos.SelectedItems.Count == 1)
             {
-                foreach(var materia in MateriaDao.ListarMateriasActualesDeUnAlumno(int.Parse(lstBxAlumnos.Text)))
+                try
+                {
+                    lblAlumnoSeleccionado.Text = "Alumno seleccionado: " + UsuarioDao.ListarNombrePorDni(int.Parse(lstBxAlumnos.Text));
+                    lblAlumnoSeleccionado.Visible = true;
+                }
+                catch (Exception)
+                {
+
+                }
+
+                foreach (var materia in MateriaDao.ListarMateriasActualesDeUnAlumno(int.Parse(lstBxAlumnos.Text)))
                 {
                     lstBxMateriasDelAlumno.Items.Add(materia);
                 }
+            }
+            else
+            {
+                lblAlumnoSeleccionado.Visible = false;
             }
             grpBxEstadoMateria.Visible = false;
         }

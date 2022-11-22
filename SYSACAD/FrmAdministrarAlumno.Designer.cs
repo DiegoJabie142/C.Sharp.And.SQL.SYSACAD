@@ -196,6 +196,7 @@
             this.Controls.Add(this.lblAlumnos);
             this.Controls.Add(this.lstBxAlumnos);
             this.Name = "frmAdministrarAlumno";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "FrmAdministrarAlumno";
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -52,6 +52,9 @@
             this.btnCerrarSesion = new System.Windows.Forms.Button();
             this.btnSerializarMateriaJSON = new System.Windows.Forms.Button();
             this.btnSerializarMateriaXML = new System.Windows.Forms.Button();
+            this.lblProfesorActualSeleccionado = new System.Windows.Forms.Label();
+            this.lblProfesorDisponibleSeleccionado = new System.Windows.Forms.Label();
+            this.lblAlumnoSeleccionado = new System.Windows.Forms.Label();
             this.grpBxAsignacionProfesores.SuspendLayout();
             this.grpBxAsignacionEstadoMateria.SuspendLayout();
             this.grpBxEstadoMateria.SuspendLayout();
@@ -351,12 +354,51 @@
             this.btnSerializarMateriaXML.UseVisualStyleBackColor = false;
             this.btnSerializarMateriaXML.Click += new System.EventHandler(this.btnSerializarMateriaSeleccionadaJSON_Click);
             // 
+            // lblProfesorActualSeleccionado
+            // 
+            this.lblProfesorActualSeleccionado.AutoSize = true;
+            this.lblProfesorActualSeleccionado.BackColor = System.Drawing.Color.Transparent;
+            this.lblProfesorActualSeleccionado.Font = new System.Drawing.Font("Bahnschrift Condensed", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblProfesorActualSeleccionado.Location = new System.Drawing.Point(12, 298);
+            this.lblProfesorActualSeleccionado.Name = "lblProfesorActualSeleccionado";
+            this.lblProfesorActualSeleccionado.Size = new System.Drawing.Size(220, 25);
+            this.lblProfesorActualSeleccionado.TabIndex = 24;
+            this.lblProfesorActualSeleccionado.Text = "Profesor actual seleccionado:";
+            this.lblProfesorActualSeleccionado.Visible = false;
+            // 
+            // lblProfesorDisponibleSeleccionado
+            // 
+            this.lblProfesorDisponibleSeleccionado.AutoSize = true;
+            this.lblProfesorDisponibleSeleccionado.BackColor = System.Drawing.Color.Transparent;
+            this.lblProfesorDisponibleSeleccionado.Font = new System.Drawing.Font("Bahnschrift Condensed", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblProfesorDisponibleSeleccionado.Location = new System.Drawing.Point(12, 346);
+            this.lblProfesorDisponibleSeleccionado.Name = "lblProfesorDisponibleSeleccionado";
+            this.lblProfesorDisponibleSeleccionado.Size = new System.Drawing.Size(244, 25);
+            this.lblProfesorDisponibleSeleccionado.TabIndex = 25;
+            this.lblProfesorDisponibleSeleccionado.Text = "Profesor disponible seleccionado:";
+            this.lblProfesorDisponibleSeleccionado.Visible = false;
+            // 
+            // lblAlumnoSeleccionado
+            // 
+            this.lblAlumnoSeleccionado.AutoSize = true;
+            this.lblAlumnoSeleccionado.BackColor = System.Drawing.Color.Transparent;
+            this.lblAlumnoSeleccionado.Font = new System.Drawing.Font("Bahnschrift Condensed", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblAlumnoSeleccionado.Location = new System.Drawing.Point(12, 409);
+            this.lblAlumnoSeleccionado.Name = "lblAlumnoSeleccionado";
+            this.lblAlumnoSeleccionado.Size = new System.Drawing.Size(164, 25);
+            this.lblAlumnoSeleccionado.TabIndex = 26;
+            this.lblAlumnoSeleccionado.Text = "Alumno seleccionado:";
+            this.lblAlumnoSeleccionado.Visible = false;
+            // 
             // FrmAdministrador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1130, 671);
+            this.Controls.Add(this.lblAlumnoSeleccionado);
+            this.Controls.Add(this.lblProfesorDisponibleSeleccionado);
+            this.Controls.Add(this.lblProfesorActualSeleccionado);
             this.Controls.Add(this.btnSerializarMateriaXML);
             this.Controls.Add(this.btnSerializarMateriaJSON);
             this.Controls.Add(this.btnCerrarSesion);
@@ -368,6 +410,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmAdministrador";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "FrmAdministrador";
             this.grpBxAsignacionProfesores.ResumeLayout(false);
             this.grpBxAsignacionProfesores.PerformLayout();
@@ -376,6 +419,7 @@
             this.grpBxEstadoMateria.ResumeLayout(false);
             this.grpBxEstadoMateria.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -404,5 +448,8 @@
         private System.Windows.Forms.Button btnCerrarSesion;
         private System.Windows.Forms.Button btnSerializarMateriaJSON;
         private System.Windows.Forms.Button btnSerializarMateriaXML;
+        private System.Windows.Forms.Label lblProfesorActualSeleccionado;
+        private System.Windows.Forms.Label lblProfesorDisponibleSeleccionado;
+        private System.Windows.Forms.Label lblAlumnoSeleccionado;
     }
 }

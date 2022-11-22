@@ -156,6 +156,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "FrmAltaMateria";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Alta materia";
             this.grpBxCuatrimestre.ResumeLayout(false);
             this.grpBxCuatrimestre.PerformLayout();
