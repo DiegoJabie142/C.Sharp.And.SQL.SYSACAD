@@ -151,6 +151,12 @@ namespace SYSACAD
             lblMateria.Visible = true;
             lblMateria.Text = "Materia: " + lstBxMateriasActuales.Text;
 
+            if (!soyAdministrador)
+            {
+                btnDarAsistencia.Visible = true;
+                btnDarAsistencia.Text = "Asistencia: " + lstBxMateriasActuales.Text;
+            }
+
             try
             {
                 int nota1 = MateriaDao.NotaDeUnAlumno(dniAlumno, lstBxMateriasActuales.Text, "Primer parcial");
@@ -231,6 +237,11 @@ namespace SYSACAD
             {
 
             }
+        }
+
+        private void btnDarAsistencia_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show($"Se ha dado asistencia en {lstBxMateriasActuales.Text} con éxito", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

@@ -46,6 +46,7 @@
             this.lblNotaSegundoParcial = new System.Windows.Forms.Label();
             this.lblNotaPrimerParcial = new System.Windows.Forms.Label();
             this.lblMateria = new System.Windows.Forms.Label();
+            this.btnDarAsistencia = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblMateriasAprobadas
@@ -244,12 +245,26 @@
             this.lblMateria.Text = "Materia:";
             this.lblMateria.Visible = false;
             // 
+            // btnDarAsistencia
+            // 
+            this.btnDarAsistencia.BackColor = System.Drawing.Color.DarkOrange;
+            this.btnDarAsistencia.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnDarAsistencia.Location = new System.Drawing.Point(216, 449);
+            this.btnDarAsistencia.Name = "btnDarAsistencia";
+            this.btnDarAsistencia.Size = new System.Drawing.Size(204, 39);
+            this.btnDarAsistencia.TabIndex = 33;
+            this.btnDarAsistencia.Text = "Asistencia: ";
+            this.btnDarAsistencia.UseVisualStyleBackColor = false;
+            this.btnDarAsistencia.Visible = false;
+            this.btnDarAsistencia.Click += new System.EventHandler(this.btnDarAsistencia_Click);
+            // 
             // frmAdministrarAlumno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(883, 500);
+            this.Controls.Add(this.btnDarAsistencia);
             this.Controls.Add(this.lblMateria);
             this.Controls.Add(this.lblNotaPrimerParcial);
             this.Controls.Add(this.lblNotaSegundoParcial);
@@ -267,9 +282,10 @@
             this.Controls.Add(this.lstBxMateriasActuales);
             this.Controls.Add(this.lblAlumnos);
             this.Controls.Add(this.lstBxAlumnos);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmAdministrarAlumno";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "FrmAdministrarAlumno";
+            this.Text = "Menú - Administrar alumno";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -294,5 +310,6 @@
         private System.Windows.Forms.Label lblNotaSegundoParcial;
         private System.Windows.Forms.Label lblNotaPrimerParcial;
         private System.Windows.Forms.Label lblMateria;
+        private System.Windows.Forms.Button btnDarAsistencia;
     }
 }
