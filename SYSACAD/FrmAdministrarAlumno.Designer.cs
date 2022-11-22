@@ -141,7 +141,7 @@
             this.lblMateriaSeleccionada.AutoSize = true;
             this.lblMateriaSeleccionada.BackColor = System.Drawing.Color.Transparent;
             this.lblMateriaSeleccionada.Font = new System.Drawing.Font("Bahnschrift Condensed", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblMateriaSeleccionada.Location = new System.Drawing.Point(526, 447);
+            this.lblMateriaSeleccionada.Location = new System.Drawing.Point(683, 376);
             this.lblMateriaSeleccionada.Name = "lblMateriaSeleccionada";
             this.lblMateriaSeleccionada.Size = new System.Drawing.Size(201, 25);
             this.lblMateriaSeleccionada.TabIndex = 21;
@@ -153,7 +153,7 @@
             this.lblMateriaAAsignar.AutoSize = true;
             this.lblMateriaAAsignar.BackColor = System.Drawing.Color.Transparent;
             this.lblMateriaAAsignar.Font = new System.Drawing.Font("Bahnschrift Condensed", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblMateriaAAsignar.Location = new System.Drawing.Point(377, 447);
+            this.lblMateriaAAsignar.Location = new System.Drawing.Point(534, 376);
             this.lblMateriaAAsignar.Name = "lblMateriaAAsignar";
             this.lblMateriaAAsignar.Size = new System.Drawing.Size(143, 25);
             this.lblMateriaAAsignar.TabIndex = 20;
@@ -163,7 +163,7 @@
             // 
             this.btnAgregar.BackColor = System.Drawing.Color.DarkOrange;
             this.btnAgregar.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnAgregar.Location = new System.Drawing.Point(731, 433);
+            this.btnAgregar.Location = new System.Drawing.Point(609, 431);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(125, 39);
             this.btnAgregar.TabIndex = 19;

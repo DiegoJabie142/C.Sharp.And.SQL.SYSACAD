@@ -198,12 +198,34 @@ namespace SYSACAD
         private void lstBxMateriasAprobadas_SelectedIndexChanged(object sender, EventArgs e)
         {
             lblMateria.Visible = true;
+            lblEstadoMateria.Visible = false;
             lblMateria.Text = "Materia: " + lstBxMateriasAprobadas.Text;
-
 
             try
             {
+                int nota1 = MateriaDao.NotaDeUnAlumno(dniAlumno, lstBxMateriasAprobadas.Text, "Primer parcial");
+                int nota2 = MateriaDao.NotaDeUnAlumno(dniAlumno, lstBxMateriasAprobadas.Text, "Segundo parcial");
 
+                lblNotaPrimerParcial.Visible = true;
+                lblNotaSegundoParcial.Visible = true;
+
+                if (nota1 != -1)
+                {
+                    lblNotaPrimerParcial.Text = "Nota primer parcial: " + nota1.ToString();
+                }
+                else
+                {
+                    lblNotaPrimerParcial.Text = "Nota primer parcial: SIN ASIGNAR";
+                }
+
+                if (nota2 != -1)
+                {
+                    lblNotaSegundoParcial.Text = "Nota segundo parcial: " + nota2.ToString();
+                }
+                else
+                {
+                    lblNotaSegundoParcial.Text = "Nota primer parcial: SIN ASIGNAR";
+                }
             }
             catch (Exception)
             {
