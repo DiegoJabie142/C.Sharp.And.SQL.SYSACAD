@@ -162,10 +162,12 @@ namespace SYSACAD
 
                 if(estadoMateria == EstadoMateria.Regular)
                 {
+                    lblEstadoMateria.Visible = true;
                     lblEstadoMateria.Text = "Estado materia: Regular";
                 }
                 else
                 {
+                    lblEstadoMateria.Visible = false;
                     lblEstadoMateria.Text = "Estado materia: Libre";
                 }
 
